@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{fe168ecb-98e1-46c9-aa55-7a6eb12cdbd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{46f9b011-924e-47e7-af09-28597e67738a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{92fd4d0e-1efa-4147-9c66-e3222aa6f43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model">
+      <UniqueIdentifier>{d0606e97-0184-4817-aa1d-6822ab981641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animation">
+      <UniqueIdentifier>{e0f7d9ac-084a-458b-8eb6-105571293f0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Loaders">
+      <UniqueIdentifier>{d44eda14-57b8-4900-ab41-96eac80dd303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{0bf0a085-084c-44c0-a833-684e025de810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animation">
+      <UniqueIdentifier>{51fd32ff-5578-4348-9bf8-01b10bc42449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Loaders">
+      <UniqueIdentifier>{2ce1c575-69e8-412b-b9b1-e5848ec971c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{1275c98f-2096-490f-aa1a-28813f9e364f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{d7206291-0f8e-4893-9160-6d6b614aaeed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{045cde89-953d-4158-baa4-7c3b6ab75d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animation\Interpolators">
+      <UniqueIdentifier>{36ca79ed-a5f5-4c66-82b0-ef031a2340fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Static">
+      <UniqueIdentifier>{70df426a-a651-404f-bc14-d7deede17229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Movable">
+      <UniqueIdentifier>{093b1ed3-5fe0-4683-9403-97a6d387ffbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics\Collision">
+      <UniqueIdentifier>{224d56fb-e995-4307-97f9-f707ba02b996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics\Cloth">
+      <UniqueIdentifier>{1ab5ed79-5f56-4a8c-9a02-139076c495bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility\Handlers">
+      <UniqueIdentifier>{56225001-a030-40c7-b8d4-771f49d9386e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animation\Interpolators">
+      <UniqueIdentifier>{7cd8ca82-8a22-4ee9-a9a4-77295ec7dd0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Static">
+      <UniqueIdentifier>{46f72b1c-885d-4c15-95a3-8599c7e14670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Movable">
+      <UniqueIdentifier>{5187e10e-373a-4c6b-a543-1a6aec7a445d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\Cloth">
+      <UniqueIdentifier>{f17ee324-9fd9-4527-b36a-42beee8bf466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\Collision">
+      <UniqueIdentifier>{5386a401-2ab9-43a8-a2db-a7fa36272eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility\Handlers">
+      <UniqueIdentifier>{fc927628-263e-49c8-8602-a9cb8b9daf60}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TesteGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Joint.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrVector3.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="PoseAttr.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolator.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJLoader.cpp">
+      <Filter>Source Files\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>Source Files\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="QuatUtils.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockingInterpolator.cpp">
+      <Filter>Source Files\Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearInterpolator.cpp">
+      <Filter>Source Files\Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="PolinomialInterpolator.cpp">
+      <Filter>Source Files\Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="PolynomInterpolator.cpp">
+      <Filter>Source Files\Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="Barn.cpp">
+      <Filter>Source Files\Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Dama.cpp">
+      <Filter>Source Files\Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Source Files\Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Source Files\Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyMember.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Carro.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cow.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cubo.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Fence.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericActor.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Headphone.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Peao.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloth.cpp">
+      <Filter>Source Files\Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="Juncao.cpp">
+      <Filter>Source Files\Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertice3D.cpp">
+      <Filter>Source Files\Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Source Files\Physics\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingAABB.cpp">
+      <Filter>Source Files\Physics\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingSphere.cpp">
+      <Filter>Source Files\Physics\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingVolume.cpp">
+      <Filter>Source Files\Physics\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Utility\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files\Utility\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>Source Files\Utility\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="BillBoard.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor2D.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloud.cpp">
+      <Filter>Source Files\Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity2D.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.hpp">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AttrVector3.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="PoseAttr.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="QuatUtils.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Joint.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJLoader.h">
+      <Filter>Header Files\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Header Files\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolator.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockingInterpolator.hpp">
+      <Filter>Header Files\Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearInterpolator.h">
+      <Filter>Header Files\Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="PolinomialInterpolator.hpp">
+      <Filter>Header Files\Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="PolynomInterpolator.h">
+      <Filter>Header Files\Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="Barn.hpp">
+      <Filter>Header Files\Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Fence.h">
+      <Filter>Header Files\Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="House.h">
+      <Filter>Header Files\Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Header Files\Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyMember.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Carro.hpp">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Cow.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Cubo.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Dama.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericActor.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Headphone.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Peao.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingAABB.h">
+      <Filter>Header Files\Physics\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingSphere.h">
+      <Filter>Header Files\Physics\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingVolume.h">
+      <Filter>Header Files\Physics\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>Header Files\Physics\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertice3D.h">
+      <Filter>Header Files\Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloth.h">
+      <Filter>Header Files\Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Juncao.h">
+      <Filter>Header Files\Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Utility\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Header Files\Utility\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Header Files\Utility\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="BillBoard.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor2D.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloud.h">
+      <Filter>Header Files\Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity2D.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

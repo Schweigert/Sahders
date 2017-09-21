@@ -1,0 +1,16 @@
+#version 330 core
+
+in vec2 UV;
+
+uniform float colorMod;
+
+out vec4 color;
+
+uniform sampler2D myTextureSampler;
+
+void main(){
+
+	vec4 res = texture( myTextureSampler, UV );
+	color = vec4(res.xyz * colorMod, res.w);
+
+}

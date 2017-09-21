@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Actor2D.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrVector3.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockingInterpolator.cpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolator.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearInterpolator.cpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJLoader.cpp">
+      <Filter>Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="PolinomialInterpolator.cpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="PolynomInterpolator.cpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity2D.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Joint.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="BillBoard.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyMember.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Carro.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloud.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cow.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Cubo.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Dama.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericActor.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Headphone.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Peao.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Barn.cpp">
+      <Filter>Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Fence.cpp">
+      <Filter>Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Objects\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloth.cpp">
+      <Filter>Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="Juncao.cpp">
+      <Filter>Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertice3D.cpp">
+      <Filter>Physics\Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Utility\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>Utility\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="QuatUtils.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="PoseAttr.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitter.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomWalker.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="Vehicle.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SeekBehaviour.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet OAC.cpp" />
+    <ClCompile Include="AvoidBoidBehaviour.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="AvoidObstacleBehaviour.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringGroup.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="WanderBehaviour.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="StayWithin.cpp">
+      <Filter>Steering Behviour</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Dove.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystemModel.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp" />
+    <ClCompile Include="SpotLight.cpp" />
+    <ClCompile Include="Movie.cpp">
+      <Filter>Objects\Movable</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Actor2D.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AttrVector3.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockingInterpolator.hpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolator.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearInterpolator.h">
+      <Filter>Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJLoader.h">
+      <Filter>Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PolynomInterpolator.h">
+      <Filter>Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="PolinomialInterpolator.hpp">
+      <Filter>Animation\Interpolators</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity2D.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Joint.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="BillBoard.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyMember.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Carro.hpp">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloud.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Cow.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Cubo.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Dama.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericActor.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Headphone.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Peao.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Barn.hpp">
+      <Filter>Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Fence.h">
+      <Filter>Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="House.h">
+      <Filter>Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Objects\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloth.h">
+      <Filter>Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Juncao.h">
+      <Filter>Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertice3D.h">
+      <Filter>Physics\Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Utility\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Utility\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="QuatUtils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="PoseAttr.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitter.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomWalker.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="Vehicle.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="IBehaviour.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekBehaviour.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="AvoidBoidBehaviour.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="AvoidObstacleBehaviour.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringGroup.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderBehaviour.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="StayWithin.h">
+      <Filter>Steering Behviour</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Dove.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystemModel.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h" />
+    <ClInclude Include="SpotLight.h" />
+    <ClInclude Include="Movie.h">
+      <Filter>Objects\Movable</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{0d97bbdf-4ed5-4279-aacf-f92ed5944416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation\Interpolators">
+      <UniqueIdentifier>{709e8219-3836-41db-924a-d0e473af863f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loaders">
+      <UniqueIdentifier>{178130de-5f0c-4a04-bf78-989f48247afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{988907ce-b797-4aaf-b052-ab1da31f7463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{7d4698b4-b988-4201-8661-7cbcd8b58797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Movable">
+      <UniqueIdentifier>{da0237c8-1172-480b-a0de-dfcfaafd3536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Static">
+      <UniqueIdentifier>{e21ed0f2-4c6b-4e8e-960a-9e2597b73647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{e3920aa7-4135-4f34-8fbc-fdc3dd147906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\Cloth">
+      <UniqueIdentifier>{4e59ae43-61a3-4693-b92d-ee88c1d7bdba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{84c9cf2a-656c-4e13-9bea-4fcc41e7d46a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Handlers">
+      <UniqueIdentifier>{3ed7fb12-78a6-4efd-8d53-82122913ea45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particles">
+      <UniqueIdentifier>{9eb2ddab-ecaa-44b1-8f47-057968c2de71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Steering Behviour">
+      <UniqueIdentifier>{0f6b19a5-c8cf-48a4-b400-93e2cf246dd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lights">
+      <UniqueIdentifier>{c5e29fcb-a493-4a09-b8b7-a93fcd2779a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{9b1183f0-0b18-4f15-8e4c-0877d7e41787}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\DepthRTT.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Particle.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Particle.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ParticleModel.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ParticleModel.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ShadowMapping.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ShadowMapping.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Billboard.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\Billboard.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\DepthRTT.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

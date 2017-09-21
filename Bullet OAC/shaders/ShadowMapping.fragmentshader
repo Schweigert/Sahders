@@ -1,0 +1,218 @@
+#version 330 core
+
+struct DirLight {
+    vec3 direction;
+	
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+
+struct PointLight {
+    vec3 position;
+    
+    float constant;
+    float linear;
+    float quadratic;
+	
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+
+struct SpotLight {
+    vec3 position;
+    vec3 direction;
+    float cutOff;
+    float outerCutOff;
+  
+    float constant;
+    float linear;
+    float quadratic;
+  
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;       
+};
+
+struct Material {
+    sampler2D diffuse;
+    sampler2D specular;
+    float shininess;
+};
+
+uniform DirLight dirLight;
+uniform PointLight pointLights[12];
+uniform SpotLight spotLight;
+
+
+// Recebemos do shader de vertice
+in vec2 UV;
+in vec3 Position_worldspace;
+in vec3 Normal_cameraspace;
+in vec3 EyeDirection_cameraspace;
+in vec3 LightDirection_cameraspace;
+in vec4 ShadowCoord;
+
+// Vem para nos
+uniform vec3 ambientColor;
+uniform vec3 specularColor;
+uniform float shininess;
+
+// Envia a cor
+layout(location = 0) out vec4 color;
+
+// Constantes
+uniform sampler2D myTextureSampler;
+uniform mat4 MV;
+uniform vec3 LightPosition_worldspace;
+uniform sampler2DShadow shadowMap;
+
+vec2 poissonDisk[16] = vec2[]( 
+   vec2( -0.94201624, -0.39906216 ), 
+   vec2( 0.94558609, -0.76890725 ), 
+   vec2( -0.094184101, -0.92938870 ), 
+   vec2( 0.34495938, 0.29387760 ), 
+   vec2( -0.91588581, 0.45771432 ), 
+   vec2( -0.81544232, -0.87912464 ), 
+   vec2( -0.38277543, 0.27676845 ), 
+   vec2( 0.97484398, 0.75648379 ), 
+   vec2( 0.44323325, -0.97511554 ), 
+   vec2( 0.53742981, -0.47373420 ), 
+   vec2( -0.26496911, -0.41893023 ), 
+   vec2( 0.79197514, 0.19090188 ), 
+   vec2( -0.24188840, 0.99706507 ), 
+   vec2( -0.81409955, 0.91437590 ), 
+   vec2( 0.19984126, 0.78641367 ), 
+   vec2( 0.14383161, -0.14100790 ) 
+);
+
+// Funcao para numero aleatorio
+float random(vec3 seed, int i){
+	vec4 seed4 = vec4(seed,i);
+	float dot_product = dot(seed4, vec4(12.9898,78.233,45.164,94.673));
+	return fract(sin(dot_product) * 43758.5453);
+}
+
+// Prototipo das funcoes
+vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir, float visibility);
+vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir, float visibility);
+vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir);
+
+void main(){
+
+	// Primeiro passo, calcular distancia ate a luz
+	float distance = length( LightPosition_worldspace - Position_worldspace );
+	
+
+	// Normal do pixel processado, em relacao a camera
+	vec3 n = normalize( Normal_cameraspace );
+
+	// Direcao pixel - luz
+	vec3 l = normalize( LightDirection_cameraspace );
+
+	// Cosseno do angulo entre a normal do pixel e a direcao da luz entre 0 e 1
+	float cosTheta = clamp( dot( n, l ), 0,1 );
+	
+	// Direcao do olho da camera
+	vec3 E = normalize(EyeDirection_cameraspace);
+
+	// Direcao que devemos refletir a luz
+	vec3 R = reflect(-l,n);
+
+	// Cosseno do angulo entre o olho e a reflexao entre 0 e 1
+	//  Cosseno = 1 -> Olhando para a reflexao
+	//  Cosseno < 1 -> Olhando para qualquer outro lugar
+	float cosAlpha = clamp( dot( E,R ), 0,1 );
+	
+	// Esa variavel é para calcular qual e a intensidade da luz (mais sombra = menos visibilidade)
+	float visibility=1.0;
+
+	// Como os calculos nao sao extremamente precisos, vamos dar uma margem de erro
+	 float bias = 0.01;
+
+
+	// AntiAliasing para a sombra. Algoritmo bruto :D
+	int samepleNum = 16;
+	float vis = 1.0/samepleNum;
+	for (int i=0;i<samepleNum;i++){
+		int index = i;
+		visibility -= vis*(1.0-texture( shadowMap, vec3(ShadowCoord.xy + poissonDisk[index]/800.0,  (ShadowCoord.z-bias)/ShadowCoord.w) ));
+	}
+	
+	// Luz principal, tambem a luz que controla a sombra
+	vec3 result = CalcDirLight(dirLight, n, E, visibility);
+	
+    // phase 2: point lights
+    for(int i = 0; i < 12; i++){
+		if (pointLights[i].ambient.r > 0 || pointLights[i].ambient.g > 0 || pointLights[i].ambient.b > 0)
+			result += CalcPointLight(pointLights[i], n, Position_worldspace, E, visibility);
+	}
+    // phase 3: spot light
+	
+	if (spotLight.ambient.r > 0 || spotLight.ambient.g > 0 || spotLight.ambient.b > 0)
+		result += CalcSpotLight(spotLight, n, Position_worldspace, E);
+
+	
+	color = vec4(result, 1.0);
+
+}
+
+vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir, float visibility)
+{
+	// Direcao da Luz
+    vec3 lightDir = normalize(light.direction);
+
+    // Calcular a porcentagem que sera refletida
+    float diff = max(dot(normal, lightDir), 0.0);
+
+    // Calcular o Specular
+    vec3 reflectDir = reflect(lightDir, normal);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 64);
+
+    // Compuna tudo
+    vec3 ambient = light.ambient * texture( myTextureSampler, UV ).rgb;
+
+    vec3 diffuse = light.diffuse * diff * texture( myTextureSampler, UV ).rgb;
+
+	vec3 specular = light.specular * spec;
+
+	// REtorna
+    return (visibility *ambient*ambientColor + visibility * diffuse + visibility * specular * specularColor);
+}
+
+// calculates the color when using a point light.
+vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir, float visibility)
+{
+
+	/* Amigao, implemente aqui sua Point Light :D */
+	return vec3(0);
+}
+
+// calculates the color when using a spot light.
+vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
+{
+    vec3 lightDir = normalize(light.position - fragPos);
+
+    float diff = max(dot(normal, lightDir), 0.0);
+
+    vec3 reflectDir = reflect(-lightDir, normal);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 64);
+
+    float distance = length(light.position - fragPos);
+    float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));    
+
+    float theta = dot(lightDir, normalize(-light.direction)); 
+    float epsilon = light.cutOff - light.outerCutOff;
+    float intensity = clamp((theta - light.outerCutOff) / epsilon, 0.0, 1.0);
+
+    vec3 ambient = light.ambient * texture( myTextureSampler, UV ).rgb;
+    vec3 diffuse = light.diffuse * diff * texture( myTextureSampler, UV ).rgb;
+    vec3 specular = light.specular * spec;
+
+    ambient *= attenuation * intensity;
+    diffuse *= attenuation * intensity;
+    specular *= attenuation * intensity;
+
+    return (ambient + diffuse + specular);
+}

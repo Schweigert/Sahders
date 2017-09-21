@@ -1,0 +1,44 @@
+#version 330 core
+
+layout(location = 0) in vec3 squareVertices;
+
+out vec2 UV;
+
+uniform vec3 CameraRight_worldspace;
+uniform vec3 CameraUp_worldspace;
+uniform mat4 VP;
+uniform vec3 BillboardPos;
+uniform vec2 BillboardSize;
+
+uniform float Status;
+
+highp float rand(vec2 co)
+{
+    highp float a = 12.9898;
+    highp float b = 78.233;
+    highp float c = 43758.5453;
+    highp float dt= dot(co.xy ,vec2(a,b));
+    highp float sn= mod(dt,3.14);
+    return fract(sin(sn) * c);
+}
+
+void main()
+{
+	vec3 particleCenter_wordspace = BillboardPos;
+	
+	vec3 vertexPosition_worldspace = 
+		particleCenter_wordspace
+		+ CameraRight_worldspace * squareVertices.x * BillboardSize.x
+		+ CameraUp_worldspace * squareVertices.y * BillboardSize.y;
+
+
+	// Output position of the vertex
+	gl_Position = VP * vec4(vertexPosition_worldspace, 1.0f);
+	if (vertexPosition_worldspace.y > BillboardPos.y){
+		gl_Position.x += Status;	
+	}
+
+
+	// UV of the vertex. No special space for this one.
+	UV = squareVertices.xy + vec2(0.5, 0.5);
+}
